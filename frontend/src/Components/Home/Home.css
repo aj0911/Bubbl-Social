@@ -1,0 +1,251 @@
+/* Home Section Starts */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px 5% 0 5%;
+    background: url('../../Assets/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: row-reverse;
+    padding-bottom: 10px;
+}
+
+.home .left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    animation: animateMenu 1s forwards ease-in;
+}
+.home .left .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.home .left .title img{
+    width: 60px;
+    object-fit: cover;
+    animation: rotate 2s linear  infinite;
+}
+
+.home .left .title h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.home .left p{
+    margin-bottom: 3rem;
+    font-size: .9rem;
+    font-weight: 300;
+}
+.home .left .all>button{
+    padding: 10px 20px;
+    border: none;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: var(--transition);
+    border: 2px solid var(--textCol);
+    background-color: var(--textCol);
+    color: white;
+}
+.home .left .all >button:hover{
+    transform: scale(1.05);
+}
+.home .left .btns{
+    display: none;
+}
+.home .right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animateMenu 1s forwards ease-in;
+}
+.home .right .cover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 2px;
+    box-shadow: -20px 20px 50px rgba(0, 0, 0, .6);
+    background-color: black;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.home .right .cover::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: 'Hover Me!!';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.home .right .cover:hover::after{
+    color: transparent;
+}
+.home .right .cover .camera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+.home .right .cover .camera .circle{
+    width: 11px;
+    height: 11px;
+    background-color: aqua;
+    border-radius: 50%;
+    border: 1px solid rgb(202, 196, 196);
+    
+}
+.home .right .mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    position: relative;
+    background-color: white;
+    opacity: 0;
+    transition: var(--transition);
+    
+}
+.home .right .cover:hover .mobile{
+    opacity: 1;
+}
+.home .right .mobile .notification,.home .right .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.home .right .mobile .notification .others{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .2rem;
+    font-size: .9rem;
+}
+.home .right .mobile .notification h3{
+    font-size: .9rem;
+}
+.home .right .mobile .header .left h3{
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+.home .right .mobile .header .right{
+    font-size: .9rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem;
+}
+.home .right .mobile .header .right .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -.5rem;
+}
+.home .right .mobile img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.home .right .mobile .add{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    background-color: #8B0A0B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.home .left .all{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+/* Home Section Ends */
+
+/* For Tablet Size */
+@media screen and (max-width:999px) {
+    .home{
+        flex-direction: column;
+        gap: 3rem;
+        background-position: right ;
+
+    }
+    .home .left .btns{
+        display: flex;
+    }
+    .home .right,.home .left{
+        width: 100%;
+    }
+
+    .home .right .cover::after{
+        content: '';
+    }
+
+    .home .right .cover .mobile{
+        opacity: 1;
+    }
+
+
+}
+
+/* For Mobile Size */
+@media screen and (max-width:599px) {
+    .home{
+        gap: 2rem;
+    }
+    .home .left .title img{
+        width: 40px;
+    }
+    .home .left .title h2{
+        font-size: 2rem;
+    }
+    .home .left p {
+        margin-bottom: 1rem;
+        font-size: .6rem;
+    }
+    .home .left .all{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .home .left .all>button{
+        font-size: .7rem;
+        padding: 5px 10px;
+    }
+
+    .home .right .cover{
+        width: 80%;
+    }
+
+}
