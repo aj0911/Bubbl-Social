@@ -35,10 +35,6 @@ const Header = () => {
             <li><NavLink onClick={(e)=>menuClick(e.currentTarget.parentElement.parentElement.parentElement)} className={'link'} style={({isActive})=>activeLink(isActive)} to={'/ui'}>UI SS</NavLink></li>
             <li><NavLink onClick={(e)=>menuClick(e.currentTarget.parentElement.parentElement.parentElement)} className={'link'} style={({isActive})=>activeLink(isActive)} to={'/download'}>Download</NavLink></li>
         </ul>
-        <div className="btns">
-            <button onClick={()=>navigate('/signup')}>Sign Up</button>
-            <button onClick={()=>navigate('/login')}>Login</button>
-        </div>
         <div className="menu" onClick={(e)=>menuClick(e.currentTarget.parentElement)}>
             <div className="line"></div>
         </div>

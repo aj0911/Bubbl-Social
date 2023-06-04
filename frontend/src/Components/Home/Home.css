@@ -11,8 +11,7 @@
     background-position: center;
     min-height: 100vh;
     overflow: hidden;
-    flex-direction: row-reverse;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .home .left{
@@ -70,121 +69,6 @@
     align-items: center;
     animation: animateMenu 1s forwards ease-in;
 }
-.home .right .cover{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    padding: 2px;
-    box-shadow: -20px 20px 50px rgba(0, 0, 0, .6);
-    background-color: black;
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-.home .right .cover::after{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: 'Hover Me!!';
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-.home .right .cover:hover::after{
-    color: transparent;
-}
-.home .right .cover .camera{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top:10px;
-    left: 0;
-    width: 100%;
-    height: 10px;
-}
-.home .right .cover .camera .circle{
-    width: 11px;
-    height: 11px;
-    background-color: aqua;
-    border-radius: 50%;
-    border: 1px solid rgb(202, 196, 196);
-    
-}
-.home .right .mobile{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 20px;
-    padding: 15px;
-    position: relative;
-    background-color: white;
-    opacity: 0;
-    transition: var(--transition);
-    
-}
-.home .right .cover:hover .mobile{
-    opacity: 1;
-}
-.home .right .mobile .notification,.home .right .mobile .header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-.home .right .mobile .notification .others{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .2rem;
-    font-size: .9rem;
-}
-.home .right .mobile .notification h3{
-    font-size: .9rem;
-}
-.home .right .mobile .header .left h3{
-    font-weight: 900;
-    font-size: 1.1rem;
-}
-.home .right .mobile .header .right{
-    font-size: .9rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: .5rem;
-}
-.home .right .mobile .header .right .menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: -.5rem;
-}
-.home .right .mobile img{
-    width: 100%;
-    object-fit: cover;
-}
-
-.home .right .mobile .add{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: white;
-    background-color: #8B0A0B;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    padding: 10px;
-}
 
 .home .left .all{
     display: flex;
@@ -202,20 +86,10 @@
         background-position: right ;
 
     }
-    .home .left .btns{
-        display: flex;
-    }
     .home .right,.home .left{
         width: 100%;
     }
 
-    .home .right .cover::after{
-        content: '';
-    }
-
-    .home .right .cover .mobile{
-        opacity: 1;
-    }
 
 
 }
@@ -237,15 +111,12 @@
     }
     .home .left .all{
         flex-direction: column;
+        align-items: flex-start;
         gap: 1rem;
     }
     .home .left .all>button{
         font-size: .7rem;
         padding: 5px 10px;
-    }
-
-    .home .right .cover{
-        width: 80%;
     }
 
 }

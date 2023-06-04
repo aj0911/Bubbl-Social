@@ -19,7 +19,8 @@
 
 /* Root variables */
 :root{
-    --textCol:#35AFDE;
+    --textCol:#105672;
+    --navCol:#b9b5b5;
     --transition: all .4s;
 }
 
