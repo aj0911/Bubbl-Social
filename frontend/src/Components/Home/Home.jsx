@@ -9,8 +9,7 @@ const Home = () => {
     <div className="home">
       <div className="left">
         <div className="title">
-          <img src={logo} alt="" />
-          <h2>Bubbl</h2>
+          <h2>Create Your<br/> Own Bubble</h2>
         </div>
         <p>Bubbl Social is a social media start-up, looking to change the social media landscape across colleges, by providing a platform for students to interact and connect with each other.</p>
         <div className="all">
@@ -18,7 +17,6 @@ const Home = () => {
         </div>
       </div>
       <div className="right">
-        
       </div>
     </div>
   )

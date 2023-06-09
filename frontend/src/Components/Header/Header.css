@@ -1,18 +1,21 @@
 /* Header Section */
+.header{
+    width: 100%;
+    position: fixed;
+    z-index: 5;
+    background-color: var(--bgCol);
+}
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    position: fixed;
+    width: 70%;
     padding: 20px 5%;
-    background-color: white;
-    z-index:25;
-    
 }
 
-header.sticky{
+.header.sticky{
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    z-index: 15;
 }
 
 header .logo{
@@ -107,6 +110,9 @@ header .nav .link:hover{
 
 /* For Tablet Size */
 @media screen and (max-width:999px) {
+    header{
+        width: 100%;
+    }
 
     header .nav{
         flex-direction: column;

@@ -1,21 +1,21 @@
 /* Home Section Starts */
 .home{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 100px 5% 0 5%;
-    background: url('../../Assets/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     overflow: hidden;
-    padding-bottom: 20px;
+    padding: 0 5% 20px 5%;
+    background-color: var(--bgCol);
+    position: relative;
 }
 
 .home .left{
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -28,21 +28,19 @@
     align-items: center;
     gap: 1rem;
 }
-.home .left .title img{
-    width: 60px;
-    object-fit: cover;
-    animation: rotate 2s linear  infinite;
-}
 
 .home .left .title h2{
     font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: 900;
+    text-transform: capitalize;
+    font-weight: 700;
+    line-height: 4rem;
 }
 .home .left p{
     margin-bottom: 3rem;
     font-size: .9rem;
     font-weight: 300;
+    width: 80%;
+    margin-top: .5rem;
 }
 .home .left .all>button{
     padding: 10px 20px;
@@ -62,19 +60,27 @@
 .home .left .btns{
     display: none;
 }
-.home .right{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: animateMenu 1s forwards ease-in;
-}
 
 .home .left .all{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+.home .right{
+    position: absolute;
+    top: 0;
+    left: 70%;
+    width: 29%;
+    height: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animateMenu 1s forwards ease-in;
+    margin: .5%;
+    background-color: var(--secondaryCol);
+    z-index: 10;
+    border-radius: 20px;
 }
 /* Home Section Ends */
 

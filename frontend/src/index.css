@@ -19,8 +19,11 @@
 
 /* Root variables */
 :root{
-    --textCol:#105672;
+    --textCol:#724CF9;
+    --primaryCol:#fcde59;
+    --secondaryCol:#ca7df9;
     --navCol:#b9b5b5;
+    --bgCol:white;
     --transition: all .4s;
 }
 
