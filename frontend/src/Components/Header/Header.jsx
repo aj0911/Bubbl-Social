@@ -26,7 +26,7 @@ const Header = () => {
         <header>
             <Link to={'/'} className="logo">
                 <img src={logo} alt="" />
-                <h2><span>Bu</span>bbl</h2>
+                <h2>Bubbl</h2>
             </Link>
             <ul className="nav">
                 <li><NavLink onClick={(e)=>menuClick(e.currentTarget.parentElement.parentElement.parentElement)} className={'link'} style={({isActive})=>activeLink(isActive)} to={'/'}>Home</NavLink></li>
