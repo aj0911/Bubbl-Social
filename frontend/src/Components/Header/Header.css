@@ -7,10 +7,10 @@
 }
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    width: 70%;
-    padding: 20px 5%;
+    width: 65%;
+    padding: 20px 3%;
 }
 
 .header.sticky{
@@ -68,15 +68,14 @@ header .nav{
 header .nav .link{
     color: black;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 900;
     cursor: pointer;
     padding: 7px 14px;
     border-radius: 3px;
     transition: var(--transition);
 }
 header .nav .link:hover{
-    background-color: var(--textCol);
-    color: white;
+    color: var(--textCol);
 }
 
 .btns{

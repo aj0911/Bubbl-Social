@@ -6,8 +6,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 const Header = () => {
     const navigate = useNavigate();
     const activeLink  = (isActive)=>(isActive)?{
-        color:'white',
-        backgroundColor:'var(--textCol)'
+        color:'var(--textCol)'
     }:{};
     const top = useRef();
     document.addEventListener('scroll',()=>{

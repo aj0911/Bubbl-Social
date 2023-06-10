@@ -28,7 +28,6 @@ const Footer = () => {
                     <h3>Support</h3>
                 </div>
                 <ul>
-                    <NavLink className={'link'} style={({isActive})=>activeLink(isActive)} to={'/faq'}>FAQ</NavLink>
                     <NavLink className={'link'} style={({isActive})=>activeLink(isActive)} to={'/privacy-policy'}>Privacy Policy</NavLink>
                     <NavLink className={'link'} style={({isActive})=>activeLink(isActive)} to={'/help'}>Help</NavLink>
                     <NavLink className={'link'} style={({isActive})=>activeLink(isActive)} to={'/contact'}>Contact</NavLink>
@@ -39,11 +38,10 @@ const Footer = () => {
                     <h3>Links</h3>
                 </div>
                 <ul>
-                <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/'}>Home</NavLink></li>
-            <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/features'}>Features</NavLink></li>
-            <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/about'}>About</NavLink></li>
-            <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/ui'}>UI SS</NavLink></li>
-            <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/download'}>Download</NavLink></li>
+                    <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/'}>Home</NavLink></li>
+                    <li> <NavLink className={'link'} style={({isActive})=>activeLink(isActive)} to={'/faq'}>FAQ</NavLink></li> 
+                    <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/about'}>About</NavLink></li>
+                    <li><NavLink  className={'link'} style={({isActive})=>activeLink(isActive)} to={'/download'}>Download</NavLink></li>
                 </ul>
             </div>
             <div className="support">

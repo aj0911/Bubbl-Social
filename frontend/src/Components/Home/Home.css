@@ -9,18 +9,20 @@
     background-position: center;
     min-height: 100vh;
     overflow: hidden;
-    padding: 0 5% 20px 5%;
+    padding: 0 0% 20px 5%;
     background-color: var(--bgCol);
     position: relative;
 }
 
 .home .left{
-    width: 60%;
     display: flex;
+    width: calc(70% - 150px);
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     animation: animateMenu 1s forwards ease-in;
+    padding-top: 20px;
+    overflow: hidden;
 }
 .home .left .title{
     display: flex;
@@ -34,6 +36,7 @@
     text-transform: capitalize;
     font-weight: 700;
     line-height: 4rem;
+    word-wrap: normal;
 }
 .home .left p{
     margin-bottom: 3rem;
@@ -43,28 +46,43 @@
     margin-top: .5rem;
 }
 .home .left .all>button{
-    padding: 10px 20px;
+    padding: 5px 10px;
     border: none;
-    text-transform: capitalize;
-    font-weight: 600;
+    background-color: black;
     cursor: pointer;
     border-radius: 5px;
     transition: var(--transition);
-    border: 2px solid var(--textCol);
-    background-color: var(--textCol);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+.home .left .all>button .icon{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.home .left .all>button .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.home .left .all>button .content h5{
+    font-size: .5rem;
+}
+.home .left .all>button .content h3{
+    font-size: 1rem;
 }
 .home .left .all >button:hover{
     transform: scale(1.05);
 }
-.home .left .btns{
-    display: none;
-}
 
 .home .left .all{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 1rem;
     width: 100%;
 }
 .home .right{
@@ -72,15 +90,106 @@
     top: 0;
     left: 70%;
     width: 29%;
-    height: 98%;
+    height: 98vh;
+    margin: .5%;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: animateMenu 1s forwards ease-in;
-    margin: .5%;
-    background-color: var(--secondaryCol);
+    background-image: linear-gradient(135deg,var(--secondaryCol) 40%,var(--primaryCol)) ;
     z-index: 10;
     border-radius: 20px;
+}
+.home .right .iphone-body{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 234px;
+    height:450px;
+    background-color: var(--navColDark);
+    transform: translate(-50%,-50%);
+    border-radius: 40px;
+    transition: var(--transition);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+}
+.home .right .iphone-body:hover{
+    transform: scale(1.05) translate(-50%,-50%);
+}
+
+.home .right .iphone-body .iphone-screen{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: calc(100% - 6px);
+    height:calc(100% - 6px);
+    background-color: black;
+    border-radius: 40px;
+    margin: 3px;
+    position: relative;
+}
+.home .right .iphone-body::after{
+    position: absolute;
+    top: 20%;
+    left: -3px;
+    width: 3px;
+    height: 20px;
+    content: '';
+    background-color: var(--navColDark);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+    border-radius:10px 0 0 10px; 
+}
+.home .right .iphone-body::before{
+    position: absolute;
+    top: 28%;
+    left: -3px;
+    width: 3px;
+    height: 50px;
+    content: '';
+    background-color: var(--navColDark);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .5);
+    border-radius:10px 0 0 10px; 
+}
+
+.home .right .iphone-body .iphone-screen .iphone-display{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height:calc(100% - 10px);
+    background-color: #1b1b1b;
+    border-radius: 40px;
+}
+.home .right .iphone-body .iphone-screen .iphone-display .iphone-cam{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 80px;
+    transform: translateX(-50%);
+    height:20px;
+    background-color: black;
+    border-radius: 20px;
+    position: relative;
+}
+.home .right .iphone-body .iphone-screen .iphone-display .iphone-cam .lens{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    width: 7px;
+    height:7px;
+    background-color: #1b1b1b;
+    border-radius: 50%;
+}
+
+.home .right .iphone-body .iphone-screen .iphone-display .line{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height:5px;
+    background-color: var(--navColDark);
+    border-radius: 10px;
 }
 /* Home Section Ends */
 
@@ -88,14 +197,32 @@
 @media screen and (max-width:999px) {
     .home{
         flex-direction: column;
+        justify-content: center;
         gap: 3rem;
-        background-position: right ;
-
+        padding: 10% 5% 20px 5%;
     }
-    .home .right,.home .left{
+    .home .left,.home .left p{
         width: 100%;
     }
 
+    .home .right{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 600px;
+        z-index: 0;
+    }
+    .home .right .iphone-body{
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+    }
+
+    .home .right .iphone-body:hover{
+        transform: scale(1.05);
+    }
 
 
 }
@@ -104,12 +231,14 @@
 @media screen and (max-width:599px) {
     .home{
         gap: 2rem;
+        padding: 20% 5% 20px 5%;
     }
     .home .left .title img{
         width: 40px;
     }
     .home .left .title h2{
         font-size: 2rem;
+        line-height: 2.5rem;
     }
     .home .left p {
         margin-bottom: 1rem;
@@ -117,7 +246,7 @@
     }
     .home .left .all{
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
     }
     .home .left .all>button{

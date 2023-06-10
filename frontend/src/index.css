@@ -22,7 +22,8 @@
     --textCol:#724CF9;
     --primaryCol:#fcde59;
     --secondaryCol:#ca7df9;
-    --navCol:#b9b5b5;
+    --navCol:#e7e7e7;
+    --navColDark:#B4B4B4;
     --bgCol:white;
     --transition: all .4s;
 }
